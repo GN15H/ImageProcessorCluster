@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 NODES_AMOUNT = 2
 BUFF_SIZE = 1024
+PORT = 5000
 
 class Connection_Handler:
     def __init__(self, nodes_amount):
@@ -15,7 +16,7 @@ class Connection_Handler:
         self.raw_img_segments = []
         self.nodes_amount = nodes_amount
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(("0.0.0.0", 5000))
+        self.socket.bind(("0.0.0.0", PORT))
         
     def get_nodes(self):
         self.socket.listen()

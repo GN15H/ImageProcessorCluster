@@ -4,8 +4,11 @@ import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 
+IP_ADDR = "127.0.0.1"
+PORT = 5000
+
 a = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-a.connect(("127.0.0.1",5000))
+a.connect((IP_ADDR,PORT))
 data = [1]
 full_data=b''
 while data:
