@@ -17,5 +17,6 @@ while data:
 parsed_data = pickle.loads(full_data)
 
 img_processor = image_processor.Image_Processor()
-img_processor.blur(parsed_data,51)
+img_processor.blur(parsed_data,13)
+# img_processor.to_grayscale(parsed_data)
 a.sendall(pickle.dumps(parsed_data))

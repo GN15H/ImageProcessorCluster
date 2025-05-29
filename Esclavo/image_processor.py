@@ -15,7 +15,7 @@ class Image_Processor:
                 pixel[:] = average
     
     def inverse(self,img_segment):
-        img_segment = 255-img_segment
+        img_segment[:,:,:] = 255-img_segment[:,:,:]
 
     def red(self,img_segment):
         img_segment[:,:,1:3] = 0
